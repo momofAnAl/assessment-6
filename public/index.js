@@ -136,7 +136,7 @@ const duel = () => {
   chooseHeader.classList.add("hide");
   renderCompDuo();
   document
-    .querySelectorAll(".bot-btn")
+    .querySelectorAll(".")
     .forEach((btn) => btn.classList.add("hide"));
   setTimeout(() => {
     axios.post("/api/duel", { compDuo, playerDuo }).then(({ data }) => {

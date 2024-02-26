@@ -86,7 +86,8 @@ app.post("/api/duel", (req, res) => {
       rollbar.info(`new player ${compDuo, playerDuo}, ${compHealth, playerHealth} calculated successfully`)
       res.status(200).send("You lost!");
     } else {
-      playerRecord.losses += 1;
+      playerRecord.losses += 1; // this is a bug
+      // playerRecord.wins += 1; // bug fix
       res.status(200).send("You won!");
     }
   } catch (error) {
